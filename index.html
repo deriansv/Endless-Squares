@@ -4,6 +4,9 @@
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Squares</title>
     
@@ -74,24 +77,25 @@
                 .catch(error => console.error('Error adding square:', error));
             };
 
-        
-        // const addSquare = () => {
-        //     const usedColors = squares.map(square => square.color); //Alla färger som redan används
-        //     const newColor = getRandomColor(usedColors); // Skapa en unik färg som inte finns i usedColors
-        //     console.log("Ny färg:", newColor);
-        //     setSquares([...squares, {id:squares.length, color: newColor}]) //behåller array och lägger till id och färgen för varje ny kvadrat
-        // }
+
+        //Beräkna antal kolumner baserat på antalet kvadrater
+            const numColumns = Math.ceil(Math.sqrt(squares.length));//Beräknar antalet kolumner
+            const gridStyle = {
+                gridTemplateColumns: `repeat(${numColumns}, 1fr)` // Dynamiskt antal kolumner
+            }
+
 
         return (
             <div className="app">
-                <button onClick={addSquare}>Lägg till ruta</button>
-                <div className="square-container">
+                <div className="square-container" style={gridStyle}>
                     {squares.map((square) =>(
                         <div 
                         key={square.id} 
                         className="square"
                         style={{backgroundColor: square.color}} />
                     ))}
+                <button onClick={addSquare}>Lägg till ruta</button>
+
                     </div>
             </div>
         )
