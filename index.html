@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
+    <link rel="stylesheet" href="styles.css">
+    <title>Squares</title>
+    
+</head>
+
+<body>
+
+    <div id="app"></div>
+    <script type="text/babel">
+        
+    // import React, { useState } from 'react';
+    // import './App.css';
+
+    function getRandomColor(excludeColors) {
+        const letters = '0123456789ABCDEF';
+        let color;
+
+        //Generera färger tills vi inte hittar nya
+        do {
+            color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+        } while (excludeColors.includes(color)); //om färgen finns, generera en ny
+        
+        return color;
+    }
+
+
+
+
+    function App() {
+        const [squares, setSquares] = React.useState([]); //Börjar utan några kvadrater
+        
+        const addSquare = () => {
+            const usedColors = squares.map(square => square.color); //Alla färger som redan används
+            const newColor = getRandomColor(usedColors); // Skapa en unik färg som inte finns i usedColors
+            setSquares([...squares, {id:squares.length, color: newColor}]) //behåller array och lägger till id och färgen för varje ny kvadrat
+        }
+
+        return (
+            <div className="app">
+                <button onClick={addSquare}>Lägg till ruta</button>
+                <div className="square-container">
+                    {squares.map((square) =>(
+                        <div key={square.id} className="square" />
+                    ))}
+                    </div>
+            </div>
+        )
+
+    }
+    
+    ReactDOM.render(<App />, document.getElementById("app"))
+    // export default App;
+
+
+    </script>
+
+        
+    
+</body>
+</html>
