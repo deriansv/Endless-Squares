@@ -41,6 +41,7 @@
         const addSquare = () => {
             const usedColors = squares.map(square => square.color); //Alla färger som redan används
             const newColor = getRandomColor(usedColors); // Skapa en unik färg som inte finns i usedColors
+            console.log("Ny färg:", newColor);
             setSquares([...squares, {id:squares.length, color: newColor}]) //behåller array och lägger till id och färgen för varje ny kvadrat
         }
 
@@ -49,7 +50,10 @@
                 <button onClick={addSquare}>Lägg till ruta</button>
                 <div className="square-container">
                     {squares.map((square) =>(
-                        <div key={square.id} className="square" />
+                        <div 
+                        key={square.id} 
+                        className="square"
+                        style={{backgroundColor: square.color}} />
                     ))}
                     </div>
             </div>
