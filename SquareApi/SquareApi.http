@@ -1,0 +1,6 @@
+@SquareApi_HostAddress = http://localhost:5153
+
+GET {{SquareApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
