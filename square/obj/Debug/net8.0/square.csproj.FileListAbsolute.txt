@@ -1,0 +1,15 @@
+/Users/deriansalazar/endless-squares/Endless-Squares-1/Endless-Squares/square/bin/Debug/net8.0/square
+/Users/deriansalazar/endless-squares/Endless-Squares-1/Endless-Squares/square/bin/Debug/net8.0/square.deps.json
+/Users/deriansalazar/endless-squares/Endless-Squares-1/Endless-Squares/square/bin/Debug/net8.0/square.runtimeconfig.json
+/Users/deriansalazar/endless-squares/Endless-Squares-1/Endless-Squares/square/bin/Debug/net8.0/square.dll
+/Users/deriansalazar/endless-squares/Endless-Squares-1/Endless-Squares/square/bin/Debug/net8.0/square.pdb
+/Users/deriansalazar/endless-squares/Endless-Squares-1/Endless-Squares/square/obj/Debug/net8.0/square.GeneratedMSBuildEditorConfig.editorconfig
+/Users/deriansalazar/endless-squares/Endless-Squares-1/Endless-Squares/square/obj/Debug/net8.0/square.AssemblyInfoInputs.cache
+/Users/deriansalazar/endless-squares/Endless-Squares-1/Endless-Squares/square/obj/Debug/net8.0/square.AssemblyInfo.cs
+/Users/deriansalazar/endless-squares/Endless-Squares-1/Endless-Squares/square/obj/Debug/net8.0/square.csproj.CoreCompileInputs.cache
+/Users/deriansalazar/endless-squares/Endless-Squares-1/Endless-Squares/square/obj/Debug/net8.0/square.sourcelink.json
+/Users/deriansalazar/endless-squares/Endless-Squares-1/Endless-Squares/square/obj/Debug/net8.0/square.dll
+/Users/deriansalazar/endless-squares/Endless-Squares-1/Endless-Squares/square/obj/Debug/net8.0/refint/square.dll
+/Users/deriansalazar/endless-squares/Endless-Squares-1/Endless-Squares/square/obj/Debug/net8.0/square.pdb
+/Users/deriansalazar/endless-squares/Endless-Squares-1/Endless-Squares/square/obj/Debug/net8.0/square.genruntimeconfig.cache
+/Users/deriansalazar/endless-squares/Endless-Squares-1/Endless-Squares/square/obj/Debug/net8.0/ref/square.dll
