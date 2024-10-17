@@ -37,13 +37,50 @@
 
     function App() {
         const [squares, setSquares] = React.useState([]); //Börjar utan några kvadrater
+        const { useEffect } = React; // Importera useEffect från React
+
+
+
+        useEffect(() => {
+            fetch("http://localhost:5153/api/squares") // Byt ut till din faktiska API URL
+                .then(response => response.json())
+                .then(data => {
+                     setSquares(data);
+                    })
+                .catch(error => console.error("Error fetching squares:", error));
+        }, []); // Tom dependency-array betyder att denna effect körs bara en gång vid laddning
+
+
+
+
+                    // Lägg till en ny kvadrat
+            const addSquare = () => {
+            const newSquare = {
+                id: squares.length,
+                color: getRandomColor(squares.map(s => s.color))
+            };
+
+            fetch("http://localhost:5153/api/squares", {
+                method: 'POST',
+                headers: {
+                'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(newSquare),
+            })
+                .then(response => response.json())
+                .then(data => {
+                setSquares([...squares, data]);  // Uppdatera state med den nya kvadraten
+                })
+                .catch(error => console.error('Error adding square:', error));
+            };
+
         
-        const addSquare = () => {
-            const usedColors = squares.map(square => square.color); //Alla färger som redan används
-            const newColor = getRandomColor(usedColors); // Skapa en unik färg som inte finns i usedColors
-            console.log("Ny färg:", newColor);
-            setSquares([...squares, {id:squares.length, color: newColor}]) //behåller array och lägger till id och färgen för varje ny kvadrat
-        }
+        // const addSquare = () => {
+        //     const usedColors = squares.map(square => square.color); //Alla färger som redan används
+        //     const newColor = getRandomColor(usedColors); // Skapa en unik färg som inte finns i usedColors
+        //     console.log("Ny färg:", newColor);
+        //     setSquares([...squares, {id:squares.length, color: newColor}]) //behåller array och lägger till id och färgen för varje ny kvadrat
+        // }
 
         return (
             <div className="app">
