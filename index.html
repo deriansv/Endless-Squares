@@ -17,8 +17,7 @@
     <div id="app"></div>
     <script type="text/babel">
         
-    // import React, { useState } from 'react';
-    // import './App.css';
+
 
     function getRandomColor(excludeColors) {
         const letters = '0123456789ABCDEF';
@@ -51,7 +50,7 @@
                      setSquares(data);
                     })
                 .catch(error => console.error("Error fetching squares:", error));
-        }, []); // Tom dependency-array betyder att denna effect körs bara en gång vid laddning
+        }, []); // Tom array betyder att denna effect körs bara en gång vid laddning
 
 
 
@@ -94,16 +93,17 @@
                         className="square"
                         style={{backgroundColor: square.color}} />
                     ))}
-                <button onClick={addSquare}>Lägg till ruta</button>
-
                     </div>
+
+                    <div className="button-container">
+                    <button onClick={addSquare}>Lägg till ruta</button>
+                </div>
             </div>
         )
 
     }
     
     ReactDOM.render(<App />, document.getElementById("app"))
-    // export default App;
 
 
     </script>

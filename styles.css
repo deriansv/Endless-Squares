@@ -12,6 +12,8 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative;
+
 }
 
 .app{
@@ -21,17 +23,27 @@ body{
     
 }
 
-button {
-    margin-top: 10px;
+.button-container {
     position: absolute;
-    top: 90%;
-    right: 50%;
+    bottom: 20px; /* Flyttar knappen nära botten */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+button {
+    margin-top: 12px;
+    position:static;
+    bottom: 60%;
+    margin-left: auto;
+    margin-right: auto;
     height: 50px;
     width: 120px;
-    background-color: #694BB2;
+    background-color: #7031A0;
     border: 1px solid black;
     border-radius: 10px;
     color: white;
+    /* transform: translateX(-50%); */
 } 
 
 .square-container {

@@ -32,3 +32,4 @@
 /Users/deriansalazar/endless-squares/Endless-Squares-1/Endless-Squares/SquareApi/obj/Debug/net8.0/SquareApi.pdb
 /Users/deriansalazar/endless-squares/Endless-Squares-1/Endless-Squares/SquareApi/obj/Debug/net8.0/SquareApi.genruntimeconfig.cache
 /Users/deriansalazar/endless-squares/Endless-Squares-1/Endless-Squares/SquareApi/obj/Debug/net8.0/ref/SquareApi.dll
+/Users/deriansalazar/endless-squares/Endless-Squares-1/Endless-Squares/SquareApi/bin/Debug/net8.0/squares.json
